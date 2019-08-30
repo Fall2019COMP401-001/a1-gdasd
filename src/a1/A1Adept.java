@@ -33,6 +33,7 @@ public class A1Adept {
 				for (int k = 0; k < numStore; k++) {
 					if (itemList[k].equals(itemCheck)) {
 						customerPrices[i] += priceList[k] * individualQuantity;
+						break;
 					}
 				}
 			}

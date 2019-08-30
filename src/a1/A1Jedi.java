@@ -26,6 +26,7 @@ public class A1Jedi {
 		for (int i = 0; i < numCustomers; i++) {
 			customerNames[i] = input.next() + " " + input.next();
 			int customerItemQuantity = input.nextInt();
+			int[] repeatCheck = customerAmount.clone();
 			
 			for (int j = 0; j < customerItemQuantity; j++) {
 				int individualQuantity = input.nextInt();
@@ -33,8 +34,11 @@ public class A1Jedi {
 				
 				for (int k = 0; k < numStore; k++) {
 					if (itemList[k].equals(itemCheck)) {
-						customerAmount[k]++;
+						if(repeatCheck[k] == customerAmount[k]) {
+							customerAmount[k]++;
+						}
 						itemAmount[k] += individualQuantity;
+						break;
 					}
 				}
 			}
