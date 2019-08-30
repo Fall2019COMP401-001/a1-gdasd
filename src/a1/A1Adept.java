@@ -12,6 +12,7 @@ public class A1Adept {
 		int numStore = input.nextInt();
 		String[] itemList = new String[numStore];
 		double[] priceList = new double[numStore];
+		
 		for (int i = 0; i < numStore; i++) {
 			itemList[i] = input.next();
 			priceList[i] = input.nextDouble();
@@ -20,12 +21,15 @@ public class A1Adept {
 		int numCustomers = input.nextInt();
 		String[] customerNames = new String[numCustomers];
 		double[] customerPrices = new double[numCustomers];
+		
 		for (int i = 0; i < numCustomers; i++) {
 			customerNames[i] = input.next() + " " + input.next();
 			int customerItemQuantity = input.nextInt();
+			
 			for (int j = 0; j < customerItemQuantity; j++) {
 				int individualQuantity = input.nextInt();
 				String itemCheck = input.next();
+				
 				for (int k = 0; k < numStore; k++) {
 					if (itemList[k].equals(itemCheck)) {
 						customerPrices[i] += priceList[k] * individualQuantity;
