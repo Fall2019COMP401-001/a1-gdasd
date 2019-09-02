@@ -13,6 +13,7 @@ public class A1Jedi {
 		String[] itemList = new String[numStore];
 		double[] priceList = new double[numStore];
 		
+		// Adds item names and prices to parallel arrays
 		for (int i = 0; i < numStore; i++) {
 			itemList[i] = input.next();
 			priceList[i] = input.nextDouble();
@@ -44,6 +45,7 @@ public class A1Jedi {
 			}
 		}
 		
+		// Prints out item name, quantity purchased, and number of customers who purchased for each item
 		for (int i = 0; i < numStore; i++) {
 			if (customerAmount[i] != 0) {
 				System.out.println(customerAmount[i] + " customers bought " + itemAmount[i] + " " + itemList[i]);
